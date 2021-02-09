@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { Category } from './category.model';
 
-import { map, catchError, fatMap } from 'rxjs/operators'
+import { map, catchError } from 'rxjs/operators'
 
 @Injectable({
   providedIn: 'root'
@@ -53,13 +53,13 @@ export class CategoryService {
 
   // PRIVATE METHODS
 
-  private jsonDataToCategories(jsonData: JSON[]): Category[] {
+  private jsonDataToCategories(jsonData: any[]): Category[] {
     const categories: Category[] = [];
     jsonData.forEach(element => categories.push(element as Category));
     return categories;
   }
 
-  private jsonDataToCategory(jsonData: JSON): Category {
+  private jsonDataToCategory(jsonData: any): Category {
     return jsonData as Category;
   }
 
