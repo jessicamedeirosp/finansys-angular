@@ -17,7 +17,7 @@ export class CategoryFormComponent implements OnInit {
   currentyAction: string;
   categoryForm: FormGroup;
   pageTitle: string;
-  serverErrorMessage: string[] = null;
+  serverErrorMessages: string[] = null;
   submittingForm: boolean = false;
   category: Category = new Category();
 
@@ -123,8 +123,8 @@ export class CategoryFormComponent implements OnInit {
     this.submittingForm = false;
 
     if (error.status === 422)
-      this.serverErrorMessage = JSON.parse(error._body).errors;
+      this.serverErrorMessages = JSON.parse(error._body).errors;
     else
-      this.serverErrorMessage = ["Falha na comunicação com o servidor. Por favor, tente mais tarde"];
+      this.serverErrorMessages = ["Falha na comunicação com o servidor. Por favor, tente mais tarde"];
   }
 }
