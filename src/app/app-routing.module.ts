@@ -5,7 +5,12 @@ const routes: Routes = [
   {
     path: 'categories',
     loadChildren: './pages/categories/categories.module#CategoriesModule'
-  }
+  },
+  {
+    path: 'entries',
+    loadChildren: './pages/entries/entries.module#EntriesModule'
+  },
+
 ];
 
 @NgModule({
