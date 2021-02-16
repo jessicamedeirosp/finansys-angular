@@ -6,7 +6,7 @@ export abstract class BaseResourceListComponent<T extends BaseResourceModel> imp
 
   resources: T[] = [];
 
-  constructor(private resourceService: BaseResourceService<T>) { }
+  constructor(protected resourceService: BaseResourceService<T>) { }
 
   ngOnInit() {
     this.resourceService.getAll().subscribe(
