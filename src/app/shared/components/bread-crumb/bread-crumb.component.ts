@@ -12,7 +12,7 @@ interface BreadCrumbItem {
 })
 export class BreadCrumbComponent implements OnInit {
 
-  @Input() items: BreadCrumbItem[];
+  @Input() items: BreadCrumbItem[] = [];
 
   constructor() { }
 
