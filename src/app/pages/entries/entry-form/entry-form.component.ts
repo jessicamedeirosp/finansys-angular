@@ -4,7 +4,7 @@ import { EntryService } from './../shared/entry.service';
 import { Entry } from './../shared/entry.model';
 import { Component, Injector, OnInit } from '@angular/core';
 import { Validators } from '@angular/forms';
-import { BaseResourceFormComponent } from 'src/app/shared/components/base-resource-form/base-resource-form';
+import { BaseResourceFormComponent } from 'src/app/shared/components/base-resource-form/base-resource-form.component';
 @Component({
   selector: 'app-entry-form',
   templateUrl: './entry-form.component.html',

@@ -3,7 +3,7 @@ import { Validators } from '@angular/forms';
 
 import { CategoryService } from './../shared/category.service';
 import { Category } from './../shared/category.model';
-import { BaseResourceFormComponent } from 'src/app/shared/components/base-resource-form/base-resource-form';
+import { BaseResourceFormComponent } from 'src/app/shared/components/base-resource-form/base-resource-form.component';
 
 @Component({
   selector: 'app-category-form',
